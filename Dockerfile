@@ -19,6 +19,9 @@ USER ${UNAME}
 
 WORKDIR '/home/user' 
 
+# Install Python
+RUN sudo apt update && sudo apt install -y python3 python3-pip
+
 RUN sudo apt install curl && \
     curl 'https://raw.githubusercontent.com/Interbotix/interbotix_ros_manipulators/main/interbotix_ros_xsarms/install/amd64/xsarm_amd64_install.sh' > xsarm_amd64_install.sh && \
     chmod +x xsarm_amd64_install.sh && \

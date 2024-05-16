@@ -18,6 +18,7 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - /dev:/dev
+      - /home/ros/xsarm_python:/home/user/xsarm_python
       # - ${LOCAL_ROS_WORKSPACE_PATH}/src:/main_workspace/src  # this line allows you to mount and sync whatever changes are
                                                         # happening inside the container (new code, new packages), to
                                                         # the outside (host machine)
